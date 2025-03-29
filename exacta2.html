@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 7.6.2.1 (MacOSX)"/>
+	<meta name="created" content="2025-03-29T15:39:56.294330241"/>
+	<meta name="changed" content="2025-03-29T15:40:28.850900490"/>
+	<style type="text/css">
+		@page { size: 21.59cm 27.94cm; margin: 2cm }
+		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
+	</style>
+</head>
+<body lang="es-MX" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0cm">
+&lt;!DOCTYPE html&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;html lang=&quot;en&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;head&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;meta
+charset=&quot;UTF-8&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;meta
+name=&quot;viewport&quot; content=&quot;width=device-width,
+initial-scale=1.0&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">   
+&lt;title&gt;Differential Equations Solver&lt;/title&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;style&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        body {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+font-family: Arial, sans-serif;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+background-color: #f4f4f9;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            margin:
+0;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            padding:
+0;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            display:
+flex;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+flex-direction: column;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+align-items: center;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        .container {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+max-width: 600px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            margin:
+20px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            padding:
+20px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+background: white;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+border-radius: 8px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        .step {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+margin-bottom: 20px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        .step h2 {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            margin:
+0 0 10px 0;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+font-size: 1.25em;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            color:
+#333;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        .choices {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+list-style-type: none;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            padding:
+0;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        .choices li
+{</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+margin-bottom: 10px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        .choices
+input[type=&quot;radio&quot;] {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+margin-right: 10px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        button {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            padding:
+10px 15px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            color:
+white;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+background-color: #007BFF;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            border:
+none;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+border-radius: 5px;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            cursor:
+pointer;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+font-size: 1em;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        button:hover
+{</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+background-color: #0056b3;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/style&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/head&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;body&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;div
+class=&quot;container&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;div
+id=&quot;step-container&quot; class=&quot;step&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        &lt;!--
+Dynamic step content will be injected here --&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    &lt;button
+id=&quot;next-btn&quot;&gt;Next Step&lt;/button&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/div&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    // Initial
+setup: Define the steps and correct answers</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    const steps = [</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+question: &quot;Step 1: Identify if the equation is exact. Given M(x,
+y) and N(x, y), check if ∂M/∂y = ∂N/∂x.&quot;,</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            choices:
+[&quot;True&quot;, &quot;False&quot;, &quot;Cannot be determined&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            correct:
+0</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        },</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+question: &quot;Step 2: Find the potential function Ψ(x, y).
+Integrate M(x, y) with respect to x.&quot;,</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            choices:
+[&quot;Ψ(x, y) = ∫M dx + g(y)&quot;, &quot;Ψ(x, y) = ∫N dy +
+h(x)&quot;, &quot;None of these&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            correct:
+0</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }, 
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+question: &quot;Step 3: Use the condition ∂Ψ/∂y = N to find
+g'(y).&quot;,</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            choices:
+[&quot;g'(y) = N - ∂/∂x(∫M dx)&quot;, &quot;g(y) = ∫M dy&quot;,
+&quot;g(y) = ∫N dx&quot;],</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            correct:
+0</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    ];</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    let currentStep
+= 0;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    // Function to
+load a step</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    function
+loadStep(stepIndex) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const step =
+steps[stepIndex];</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const
+stepContainer = document.getElementById('step-container');</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const
+stepHTML = `</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+&lt;h2&gt;${step.question}&lt;/h2&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;ul
+class=&quot;choices&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+${step.choices.map((choice, index) =&gt; `</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+&lt;li&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   &lt;label&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       &lt;input type=&quot;radio&quot; name=&quot;choice&quot;
+value=&quot;${index}&quot;&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+       ${choice}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                    
+   &lt;/label&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">                   
+&lt;/li&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+`).join('')}</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            &lt;/ul&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        `;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">       
+stepContainer.innerHTML = stepHTML;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    // Function to
+handle the user's selection</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    function
+handleNextStep() {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const
+selectedOption =
+document.querySelector('input[name=&quot;choice&quot;]:checked');</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        if
+(!selectedOption) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+alert(&quot;Please select an answer.&quot;);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            return;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        const
+selectedAnswer = parseInt(selectedOption.value);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        if
+(selectedAnswer === steps[currentStep].correct) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+alert(&quot;Correct!&quot;);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            if
+(currentStep &lt; steps.length - 1) {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+currentStep++;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+loadStep(currentStep);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            } else {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">               
+alert(&quot;You have completed all the steps!&quot;);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">            }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        } else {</p>
+<p style="line-height: 100%; margin-bottom: 0cm">           
+alert(&quot;Incorrect. Try again.&quot;);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">        }</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    }</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">    // Initial
+setup: Load the first step</p>
+<p style="line-height: 100%; margin-bottom: 0cm">   
+document.getElementById('next-btn').addEventListener('click',
+handleNextStep);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">   
+loadStep(currentStep);</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/script&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+
+</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/body&gt;</p>
+<p style="line-height: 100%; margin-bottom: 0cm">&lt;/html&gt;</p>
+</body>
+</html>
